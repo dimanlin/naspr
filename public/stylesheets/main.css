@@ -1,0 +1,641 @@
+html, body {
+	margin:0;
+	padding:0;
+	background-color: #fff;
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:14px;
+}
+
+.userinfo {
+  position:absolute;
+  left:450px;
+  top:10px;
+  width:250px;
+}
+
+.useravatar {
+  float:left;
+  margin-right:10px;
+}
+
+.listparams li {
+  font-size:10px;
+  color:blue;
+  margin-top:3px;
+}
+
+.listparams li a {
+  font-size:10px;
+  color:black;
+}
+
+.listparams {
+  margin:0;
+  list-style-type:none;
+}
+
+
+.remember_me {
+  padding-top:10px;
+}
+
+.authtr {
+  font-size:14px;
+}
+
+.auth {
+ margin-top:150px;
+}
+
+
+.enterbutton {
+  width:169px;
+  height:40px;
+  margin-left:190px;
+}
+
+.authtablelabel a {
+  color:black;
+  font-size:30px;
+}
+
+.fogetenter {
+  width:100%;
+  margin-top:15px;
+}
+
+.empatyzero {
+  height:13px;
+}
+
+.authtable {
+  margin-top:20px;
+}
+
+.authtablelabel {
+  padding-left:15px;
+}
+
+.authinputtd {
+  padding-right:30px;
+}
+
+.authinput {
+  border:3px solid black;
+  width:280px;
+  font-size:30px;
+  height:30px;
+}
+
+.authtable {
+  width:100%;
+  font-size:30px;
+}
+
+.auth {
+  width:100%;
+  margin:0 auto;
+  background-image:url(/images/auth-background.jpg);
+  width:622px;
+  height:233px;
+}
+
+.errormessagesforauth {
+  width:622px;
+  margin:0 auto;
+  margin-top:150px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.accept_rules {
+  margin-top:15px;
+}
+
+.rules {
+  margin-top:12px;
+}
+
+.td2 {
+  max-width:552px;
+}
+
+.right_submit {
+  float:right;
+}
+
+.new_debate_textarea {
+  width:100%;
+  border:1px solid #cdcdcd;
+}
+
+.margintopnewdebate {
+  padding-top:24px;
+}
+
+.text_example {
+  margin-left:2px;
+}
+
+
+.label_new_debate {
+  font-size:24px;
+  vertical-align:top;
+  padding-right:15px;
+}
+
+.new_debate {
+  color:#c0c0c0;
+}
+
+
+
+.nil {
+  height:15px;
+}
+
+.reg_table_padding {
+  padding-left:15px;
+}
+
+.reginput {
+  height:28px;
+  width:100%;
+  border:1px solid #cdcdcd;
+  font-size:18px;
+}
+
+.td_for_reg {
+  font-size:18px;
+}
+
+.tdforsubmit {
+  text-align:right;
+}
+
+.redtext {
+  font-size:11px;
+  color:red;
+  padding-left:15px;
+}
+
+.redstar {
+  color:red;
+}
+
+.colorza {
+  color:#2077f9;
+}
+
+.colorprotiv {
+  color:#ff0000;
+}
+
+.rezansvershow {
+  margin-top:10px;
+  font-size:24px;
+}
+
+.zaleft {
+  float:left;
+}
+
+.protivright {
+  float:right;
+}
+
+.avatar2 {
+  float:left;
+  margin-right:7px;
+  margin-bottom:7px;
+  margin-left:7px;
+}
+
+.anvertruediv {
+  border: 1px solid #c2daff;
+  width:100%;
+  margin-top:20px;
+  padding-top:7px;
+  padding-bottom:7px;
+}
+
+.anverfalsediv {
+  border: 1px solid #ffbcbc;
+  width:100%;
+  margin-top:20px;
+  padding-top:7px;
+  padding-bottom:7px;
+}
+
+.tableforanvers {
+  width:100%;
+}
+
+.left_block {
+  padding-right:15px;
+  width:49%;
+  vertical-align:top;
+}
+
+.right_block {
+  padding-left:15px;
+  width:49%;
+  vertical-align:top;
+}
+
+.header_for_debate_not_link {
+  font-size:20px;
+  color:#878787;
+}
+
+.header_for_debate a {
+  font-size:14px;
+  color:#878787;
+}
+
+.topomichto {
+  font-size:18px;
+  margin-top:10px;
+}
+
+.protivya {
+  margin-left:30px;
+  display:inline;
+}
+
+.givegolosopen {
+  margin-top:15px;
+}
+
+.givegolos {
+  margin-top:15px;
+  display:none;
+}
+
+.yaprotiv {
+  color:red;
+  font-size:30px;
+}
+
+.yaza {
+  color:#3aabfa;
+  font-size:30px;
+}
+
+.golosovat a{
+  color:#3aabfa;
+}
+
+.golosovat {
+  float:right;
+  margin-right:40px;
+  font-size:18px;
+}
+
+.rezansverlist {
+  margin-top:10px;
+}
+
+.rezdebatefalse {
+  font-size:18px;
+  display:inline;
+}
+
+.rezdebate {
+  font-size:18px;
+  margin-right:70px;
+  float:left;
+}
+
+.list_debates {
+  margin-top:20px;
+}
+
+.pagination {
+  font-size:18px;
+  margin-top:15px;
+}
+
+.pagination span {
+ color:red;
+}
+
+.pagination a{
+  color:#00b9d5;
+}
+
+.content {
+  margin:15px;
+  min-height:500px;
+}
+
+.navigation a{
+  color:black;
+}
+
+.navigation {
+  color:black;
+  font-size:12px;
+}
+
+.layvinternet {
+  float:right;
+  margin-top:15px;
+  margin-right:15px;
+}
+
+.footer_menu a {
+  margin-right:20px;
+}
+
+.footer_menu {
+  float:left;
+  width:70%;
+  padding-left:20px;
+  padding-top:16px;
+}
+
+footer a {
+  font-size:18px;
+  color:black;
+}
+
+footer {
+  width:100%;
+  height:61px;
+  background-color:#77f4ff;
+  display:block;
+}
+
+.rezansverfalse {
+  border:1px solid black;
+  width:83px;
+  height:26px;
+  background-color:#fcfb5e;
+  font-size:18px;
+  color:red;
+  text-align:center;
+}
+
+.rezansver {
+  border:1px solid black;
+  width:83px;
+  height:26px;
+  background-color:#fcfb5e;
+  font-size:18px;
+  color:#2077f9;
+  text-align:center;
+}
+
+.ansver {
+  margin-top:15px;
+}
+
+.voited_form {
+  margin-top:10px;
+  display:none;
+}
+
+.message2 {
+  width:600px;
+  margin-top:10px;
+}
+
+.message {
+  width:100%;
+  margin-top:10px;
+}
+
+.protivsmall {
+  color:#ff0000;
+}
+
+.zasmall {
+  color:#2077f9;
+}
+
+.golosovat {
+  margin-top:8px;
+  cursor:pointer;
+  color:#3AABFA;
+  border-bottom:1px dotted #3AABFA;
+}
+
+.dot_link {
+  border-bottom: 1px dotted #3aabfa;
+  color:#3aabfa;
+  font-size:12px;
+  display:inline;
+  cursor:pointer;
+}
+
+.clear {
+  clear:both;
+}
+
+.protiv {
+  color:#ff0000;
+  font-size:30px;
+}
+
+.numvoited {
+  color:#72cb98;
+  font-size:30px;
+}
+
+.za {
+  color:#2077f9;
+  font-size:30px;
+}
+
+.falselist {
+  color:red;
+  font-size:18px;
+}
+
+.zalist {
+  color:#2077f9;
+  font-size:18px;
+}
+
+.ansverfalsenum {
+  float:right;
+}
+
+.ansvertruenum {
+  float:left;
+}
+
+.text {
+  font-size:14px;
+}
+
+.avatar {
+  float:left;
+  margin-right:10px;
+  margin-bottom:10px;
+}
+
+.avataranver {
+  float:left;
+  margin-right:10px;
+  margin-bottom:10px;
+}
+
+h2 {
+  margin:0px, 10px, 0px, 10px;
+  font-size:18px;
+}
+
+.header_h1 {
+  margin:10px;
+  font-size:30px;
+  margin-left:0px;
+}
+
+section {
+  display:block;
+}
+
+.list_lastdebate a {
+  color:#878787;
+}
+
+.bottom_lastdebate {
+  margin-top:15px;
+}
+
+
+.border {
+  border:1px solid black;
+}
+
+header {
+  width:100%;
+  height:92px;
+  background-color:#77f4ff;
+  display:block;
+}
+
+.logo h1 {
+  margin:0px
+}
+
+.logo {
+  position:absolute;
+  top:12px;
+  left:12px;
+}
+
+.header {
+  position:absolute;
+  top:12px;
+  left:190px;
+}
+
+.search {
+  position:absolute;
+  top:20px;
+  right:90px;
+  width:250px;
+}
+
+.input_search {
+  border:1px solid black;
+  display:block;
+  float:left;
+  width:100%;
+}
+
+.search_image {
+  margin-top:10px;
+  display:block;
+  padding-left:10px;
+}
+
+
+
+.registration a{
+  color:#3b4dff;
+  font-size:18px;
+}
+
+.registration {
+  position:absolute;
+  top:65px;
+  right:90px;
+}
+
+.enter a{
+  color:#3b4dff;
+  font-size:18px;
+}
+
+.enter {
+  position:absolute;
+  top:65px;
+  right:290px;
+}
+
+.hightblue a {
+  color:#3aabfa;
+}
+
+.color_h2_a {
+  color:#3aabfa;
+}
+
+.blue {
+  color:#2077f9;
+}
+
+.hightblue {
+  padding-top:15px;
+  text-align:right;
+}
+
+.hightred {
+  padding-top:15px;
+}
+
+.hightred a {
+  color:#ff0000;
+}
+
+.red {
+  color:#ff0000;
+}
+
+.valign {
+  vertical-align:top;
+  width:50%;
+}
+
+.main_table {
+  width:99%;
+}
+
+.trueansver {
+  color:blue;
+}
+
+.falseansver {
+  color:red;
+}
+

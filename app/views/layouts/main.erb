@@ -1,0 +1,78 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <%= stylesheet_link_tag "main" %>
+    <title>Nasp</title>
+  </head>
+  <body>
+  <%= javascript_include_tag "jquery" %>
+  <%= javascript_include_tag "slide_void" %>
+    <header>
+      <div class="logo">
+        <h1>
+          <%= image_tag("naspr.jpg", :alt => "Споры") %>
+        </h1>
+      </div>
+
+      <div class="header">
+        <h1>Споры, мнения</h1>
+      </div>
+
+      <% if current_user -%>
+        <div class="userinfo">
+          <% if current_user.avatar_file_name -%>
+            <div class="useravatar">
+              <%= image_tag current_user.avatar.url %>
+            </div>
+          <% end -%>
+
+          <ul class="listparams">
+            <li><a href="#">Мои споры/мнения</a></li>
+            <li><a href="#">Редактировать профиль</a></li>
+            <li><a href="#">Новый спор/мнение</a></li>
+          </ul>
+          <div class="clear"></div>
+        </div>
+      <% end -%>
+
+
+      <div class="search">
+        <form action="#" method="post">
+          <input type="search" class="input_search">
+          <input type="image" src="/images/search_button.png" class="search_image" alt="asdasd"/>
+        </form>
+      </div>
+
+      <div class="enter">
+        <% unless current_user -%>
+          <%= link_to 'Войти', new_user_session_url %>
+        <% end -%>
+      </div>
+
+      <div class="registration">
+        <% if current_user -%>
+          <%= link_to 'Выйти', logout_url %>
+        <% else -%>
+          <%= link_to 'Регистрация', new_user_url %>
+        <% end -%>
+      </div>
+    </header>
+
+    <div class="content">
+  <%= yield %>
+    </div>
+      <footer>
+        <div class="footer_menu">
+            <%= render :partial => 'templates/bottom_menu', :collection => @contents %>
+        </div>
+
+        <div class="layvinternet">
+          <%= image_tag("layvinternet.png", :alt => "layvinternet") %>
+        </div>
+
+        <div class="clear"></div>
+      </footer>
+  </body>
+</html>
+

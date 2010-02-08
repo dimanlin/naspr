@@ -1,0 +1,31 @@
+  <div class="list_debates">
+    <h2 class="header_for_debate"><%= link_to debate.header, debate_url(:id => debate.id) %></h2>
+    <div class="avatar">
+      <%= image_tag("avatar.jpg") %>
+    </div>
+    <%= debate.message %>
+    <div class="clear"></div>
+  </div>
+
+  <div class="rezansverlist">
+    <div class="rezdebate">
+      <span class="zalist">За:</span> <%= debate.num_ansver_true %>
+    </div>
+    <div class="rezdebatefalse">
+      <span class="falselist">Против:</span> <%= debate.num_ansver_false %>
+    </div>
+
+    <div class="golosovat" title="debate_<%= debate.id %>">
+      Голосовать
+    </div>
+  </div>
+
+  <div class="givegolos" title="debate_<%= debate.id %>">
+    <% @comment = Comment.new(:debate_id => debate.id) %>
+    <% form_for @comment do |f| -%>
+      <%= f.error_messages %>
+      <%= f.hidden_field :debate_id %>
+      <%= render :partial => 'templates/form_comment', :object => f %>
+    <% end -%>
+  </div>
+

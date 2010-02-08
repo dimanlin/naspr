@@ -1,0 +1,12 @@
+<% all = debate.comments -%>
+<% trueansver = debate.comments.find(:all, :conditions => ["voted = ?", false]).size -%>
+
+<tr>
+  <td colspan="2">
+    <a href="#">
+      <%= link_to debate.header, debate_url(debate.id) %>
+    </a>
+    (<span class="trueansver"><%= trueansver %></span>|<span class="falseansver"><%= all.size - trueansver %></span>)
+  </td>
+</tr>
+

@@ -1,0 +1,44 @@
+<%= render :partial => 'templates/site_navigation' %>
+
+      <h1>Новый спор</h1>
+<% form_for @debate do |f| -%>
+      <%= f.error_messages %>
+      <table class="new_debate">
+        <tr>
+          <td class="label_new_debate">Тема:</td>
+          <td class="td2">
+            <%= f.text_field :header, :class => "reginput"%><br />
+            <div class="text_example">
+              Например: Я думаю что моя девушка зло
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="label_new_debate margintopnewdebate">Почему вы так думаете:</td>
+          <td class="margintopnewdebate td2">
+            <%= f.text_area :message, :class => "new_debate_textarea", :rows => 8 %><br />
+            <div class="text_example">
+              Например: Моя девушка обманывает меня по мелочам я думаю мне стоит её бросить, что думают остальныйе?
+            </div>
+
+            <div class="rules">
+            <%= @rules.text %>
+            </div>
+
+            <div class="accept_rules">
+              <%= f.check_box :rules %> Я принимаю правила.
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td></td>
+          <td class="td2">
+            <%= f.check_box :alert %> Раз в сутки оповещать меня о новых мнениях
+            <div class="right_submit">
+               <%= image_submit_tag("create.png", :alt => "Создать спор", :id => "Создать спор")  %>
+            </div>
+          </td>
+        </tr>
+      </table>
+<% end -%>
+

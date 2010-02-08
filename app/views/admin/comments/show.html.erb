@@ -1,0 +1,45 @@
+<div class="block">
+  <div class="secondary-navigation">
+    <ul class="wat-cf">
+      <li class="first"><%= link_to "#{t("web-app-theme.list", :default => "List")}", admin_comments_path  %></li>
+      <li><%= link_to "#{t("web-app-theme.new", :default => "New")}", new_admin_comment_path %></li>
+      <li class="active"><%= link_to "#{t("web-app-theme.show", :default => "Show")}", admin_comment_path %></li>
+    </ul>
+  </div>
+  <div class="content">
+    <div class="inner">
+
+        <p>
+          <b><%= t("activerecord.attributes.admin_comment.user.nick", :default => t("activerecord.labels.nick", :default => "User")) %>:</b>
+          <%= link_to @comment.user.nick, admin_user_url(@comment.user.id) %>
+        </p>
+
+        <p>
+          <b><%= t("activerecord.attributes.admin_comment.debate_id", :default => t("activerecord.labels.debate_id", :default => "Debate")) %>:</b>
+          <%= @comment.debate_id %>
+        </p>
+
+        <p>
+          <b><%= t("activerecord.attributes.admin_comment.message", :default => t("activerecord.labels.message", :default => "Message")) %>:</b>
+          <%= @comment.message %>
+        </p>
+
+        <p>
+          <b><%= t("activerecord.attributes.admin_comment.voted", :default => t("activerecord.labels.voted", :default => "Voted")) %>:</b>
+          <%= @comment.voted %>
+        </p>
+
+        <p>
+          <b><%= t("activerecord.attributes.admin_comment.check", :default => t("activerecord.labels.check", :default => "Check")) %>:</b>
+          <%= @comment.check %>
+        </p>
+      <div class="wat-cf">
+        <%= link_to "#{image_tag("web-app-theme/application_edit.png", :alt => "#{t("web-app-theme.edit", :default=> "Edit")}")} #{t("web-app-theme.edit", :default=> "Edit")}", edit_admin_comment_path(@comment), :class => "button" %>
+        <%= link_to "#{image_tag("web-app-theme/cross.png", :alt => "#{t("web-app-theme.delete", :default=> "Delete")}")} #{t("web-app-theme.delete", :default => "Delete")}", admin_comment_path(@comment), :method => "delete", :class => "button", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}" %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<% content_for :sidebar, render(:partial => 'templates/sidebar') -%>
+

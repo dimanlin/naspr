@@ -1,0 +1,26 @@
+<table class="main_table">
+  <tr>
+    <td class="valign">
+      <section>
+        <h1 class="header_h1">Последние споры</h1>
+          <table class="list_lastdebate">
+            <%= render :partial => 'debate', :collection => @debates %>
+            <tr>
+              <td class="hightred">
+                <%= link_to 'Создать своё мнение', new_debate_url %>
+              </td>
+              <td class="hightblue">
+                <%= link_to 'Все мнения', debates_url %>
+              </td>
+            </tr>
+          </table>
+        </section>
+          </td>
+          <td class="valign">
+            <section>
+              <%= render :partial => 'templates/lastdebate', :object => @debates.first %>
+            </section>
+          </td>
+        </tr>
+      </table>
+

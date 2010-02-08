@@ -1,0 +1,40 @@
+<div class="block">
+  <div class="secondary-navigation">
+    <ul class="wat-cf">
+      <li class="first"><%= link_to "#{t("web-app-theme.list", :default => "List")}", admin_debates_path  %></li>
+      <li><%= link_to "#{t("web-app-theme.new", :default => "New")}", new_admin_debate_path %></li>
+      <li class="active"><%= link_to "#{t("web-app-theme.show", :default => "Show")}", admin_debate_path %></li>
+    </ul>
+  </div>
+  <div class="content">
+    <div class="inner">
+
+        <p>
+          <b><%= t("activerecord.attributes.admin_debate.header", :default => t("activerecord.labels.header", :default => "Header")) %>:</b>
+          <%= @debate.header %>
+        </p>
+
+        <p>
+          <b><%= t("activerecord.attributes.admin_debate.user_id", :default => t("activerecord.labels.user_id", :default => "User")) %>:</b>
+          <%= @debate.user_id %>
+        </p>
+
+        <p>
+          <b><%= t("activerecord.attributes.admin_debate.message", :default => t("activerecord.labels.message", :default => "Message")) %>:</b>
+          <%= @debate.message %>
+        </p>
+
+        <p>
+          <b><%= t("activerecord.attributes.admin_debate.check", :default => t("activerecord.labels.check", :default => "Check")) %>:</b>
+          <%= @debate.check %>
+        </p>
+      <div class="wat-cf">
+        <%= link_to "#{image_tag("web-app-theme/application_edit.png", :alt => "#{t("web-app-theme.edit", :default=> "Edit")}")} #{t("web-app-theme.edit", :default=> "Edit")}", edit_admin_debate_path(@debate), :class => "button" %>
+        <%= link_to "#{image_tag("web-app-theme/cross.png", :alt => "#{t("web-app-theme.delete", :default=> "Delete")}")} #{t("web-app-theme.delete", :default => "Delete")}", admin_debate_path(@debate), :method => "delete", :class => "button", :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}" %>
+      </div>
+    </div>
+  </div>
+</div>
+
+<% content_for :sidebar, render(:partial => 'templates/sidebar') -%>
+

@@ -1,0 +1,17 @@
+<%= javascript_include_tag("slide_golos.js") %>
+
+<section>
+  <%= render :partial => 'templates/site_navigation.erb' %>
+  <h1 class="header_h1">Все споры</h1>
+
+<%= will_paginate @debates, :next_label => "", :previous_label => "" %>
+
+<% render :partial => 'templates/list_debate_navigation.erb' %>
+  <%= render :partial => 'debate.erb', :collection => @debates %>
+<% render :partial => 'templates/list_debate_navigation.erb' %>
+
+<%= will_paginate @debates, :next_label => "", :previous_label => "" %>
+
+
+</section>
+

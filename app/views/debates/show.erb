@@ -1,0 +1,58 @@
+<%= javascript_include_tag "slide_golos" %>
+<section>
+<%= render :partial => 'templates/site_navigation' %>
+  <h1 class="header_h1">Все споры</h1>
+
+
+  <div class="list_debates">
+    <h2 class="header_for_debate"><%= @debate.header %></h2>
+    <div class="avatar">
+      <%= image_tag("avatar2.jpg", :alt => "avatar") %>
+    </div>
+<%= @debate.message %>
+    <div class="clear"></div>
+  </div>
+
+  <div class="rezansverlist">
+    <div class="golosovat" title="a1">
+      <%= link_to 'Голосовать', new_debate_comment_url(:debate_id => params[:id]) %>
+    </div>
+    <div class="clear"></div>
+  </div>
+
+
+  <% if @falseansver.total_entries > @trueansver.total_entries -%>
+    <%= will_paginate @falseansver, :next_label => "", :previous_label => ""  %>
+  <% else -%>
+    <%= will_paginate @trueansver, :next_label => "", :previous_label => ""  %>
+  <% end -%>
+
+  <div class="rezansvershow">
+    <div class="zaleft">
+      <span class="colorza">За:</span><span><%= @numtrueansver %></span>
+    </div>
+    <div class="protivright">
+      <span class="colorprotiv">Против:</span><span><%= @numfalseansver %></span>
+    </div>
+  </div>
+
+  <table class="tableforanvers">
+    <tr>
+      <td class="left_block">
+        <%= render :partial => 'ansvertrue', :collection => @trueansver %>
+      </td>
+      <td class="right_block">
+        <%= render :partial => 'ansverfalse', :collection => @falseansver %>
+      </td>
+    </tr>
+  </table>
+
+  <% if @falseansver.total_entries > @trueansver.total_entries -%>
+    <%= will_paginate @falseansver, :next_label => "", :previous_label => ""  %>
+  <% else -%>
+    <%= will_paginate @trueansver, :next_label => "", :previous_label => ""  %>
+  <% end -%>
+
+
+</section>
+

@@ -1,0 +1,24 @@
+<section>
+<%= render :partial => 'templates/site_navigation' %>
+  <h1 class="header_h1">Все споры</h1>
+
+
+  <div class="list_debates">
+    <h2 class="header_for_debate_not_link"><%= @debate.header %></h2>
+    <div class="avatar">
+      <%= image_tag("avatar2.jpg", :alt => "avatar") %>
+    </div>
+    <%= @debate.message %>
+    <div class="clear"></div>
+  </div>
+
+  <div class="givegolosopen">
+
+<% form_for @comment do |f| -%>
+  <%= f.error_messages %>
+  <%= f.hidden_field :debate_id %>
+  <%= render :partial => 'templates/form_comment', :object => f %>
+<% end -%>
+  </div>
+</section>
+

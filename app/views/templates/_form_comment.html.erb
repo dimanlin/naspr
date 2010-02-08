@@ -1,0 +1,17 @@
+
+  <%= form_comment.radio_button :voted, 1 %>
+  <span class="yaza">я за!</span>
+  <div class="protivya">
+    <%= form_comment.radio_button :voted, 0 %>
+    <span class="yaprotiv">я против!</span>
+  </div><br />
+
+  <div class="topomichto">
+    Потому, что:
+  </div>
+
+  <%= form_comment.text_area :message, :class => "message2", :size => "40x8" %>
+  <br />
+
+  <%= submit_tag("Отдать голос") %>
+

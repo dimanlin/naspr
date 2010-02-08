@@ -1,0 +1,43 @@
+              <h1 class="header_h1">Последние спор</h1>
+              <h2><%= link_to lastdebate.header, debate_url(:id => lastdebate.id), :class => "color_h2_a" %></h2>
+              <div>
+                <div class="avatar">
+                  <img src="images/avatar.jpg" alt="asdasd" />
+                </div>
+
+                <div class="text"><%= lastdebate.message %></div>
+              </div>
+              <div class="clear"></div>
+
+              <div>
+                <div class="ansvertruenum">
+                  <span class="za">За:</span><span class="numvoited"><%= lastdebate.num_ansver_true %></span>
+                </div>
+                <div class="ansverfalsenum">
+                  <span class="protiv">Против:</span><span class="numvoited"><%= lastdebate.num_ansver_false %></span>
+                </div>
+              </div>
+
+              <div class="clear"></div>
+
+              <div class="golosovat2">
+                <div class="dot_link">
+                  Голосовать
+                </div>
+              </div>
+
+              <div class="voited_form">
+                <% form_for @comment, :url => debate_comments_url(:debate_id => lastdebate.id) do |f| -%>
+                  <span class="zasmall">Я за</span><%= f.radio_button :voted, 0 %>
+                  <span class="protivsmall">Я против</span><%= f.radio_button :voted, 1 %>
+                  <br />
+                  потому, что:
+                  <%= f.text_area :message, :rows => 10, :class => "message"%>
+                  <%= f.hidden_field :debate_id %>
+                  <br />
+                  <%= submit_tag "Отдать голос" %>
+                <% end -%>
+              </div>
+
+<%= render :partial => 'templates/user_comment', :collection => lastdebate.comments.find(:all, :limit => 6, :order => "created_at DESC") %>
+

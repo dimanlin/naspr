@@ -1,0 +1,20 @@
+              <div class="ansver">
+                <div class="avataranver">
+                  <div>
+                    <%= image_tag("avatar2.jpg", :alt => "asdasd") %>
+                  </div>
+
+                  <% if user_comment.voted == false -%>
+                    <div class="rezansver">
+                  <% else -%>
+                    <div class="rezansverfalse">
+                  <% end -%>
+                    <%= user_comment.ansver %>
+                  </div>
+
+                </div>
+
+                <div class="text"><%= user_comment.message %></div>
+              </div>
+              <div class="clear"></div>
+

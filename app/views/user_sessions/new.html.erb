@@ -1,0 +1,57 @@
+<%= render :partial => 'templates/site_navigation' %>
+<%= javascript_include_tag "jquery.dropshadow.js" %>
+    <script type="text/javascript">
+      window.onload = function()
+      {
+        $(".auth").dropShadow({left: 4, top: 4, opacity: 0.7, blur: 2});
+      }
+    </script>
+      <% form_for @user_session do |f| -%>
+      <div class="errormessagesforauth"><%= f.error_messages %></div>
+
+      <div class="auth">
+        <table class="authtable">
+          <tr>
+            <td class="authtablelabel">
+              Электронная почта:
+            </td>
+            <td class="authinputtd">
+              <%= f.text_field :login, :class => "authinput" %>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="2" class="empatyzero"></td>
+          </tr>
+          <tr>
+            <td class="authtablelabel">
+              Пароль:
+            </td>
+            <td class="authinputtd">
+              <%= f.password_field :password, :class => "authinput" %>
+            </td>
+          </tr>
+          <tr class="authtr">
+            <td>
+            </td>
+            <td class="remember_me">
+              <%= f.check_box :remember_me %> Запомнить меня
+            </td>
+          </tr>
+        </table>
+
+        <table class="fogetenter">
+          <tr>
+            <td class="authtablelabel">
+              <a href="#">Я забыл</a>
+            </td>
+            <td>
+              <div class="enterbutton">
+                  <%= image_submit_tag "login.png", :alt => "login", :id => "login" %>
+              </div>
+            </td>
+          </tr>
+        </table>
+
+      </div>
+      <% end -%>
+
