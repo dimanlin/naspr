@@ -6,6 +6,58 @@ html, body {
 	font-size:14px;
 }
 
+.paddingleft15 {
+  padding-left:15px;
+}
+
+
+.font18 {
+  font-size:18px;
+}
+
+.mydebatesprotiv {
+  color:#ff0000;
+  font-size:18px;
+}
+
+.mydebatesza {
+  color:#2077F9;
+  font-size:18px;
+}
+
+.mydebates a {
+  color:#878787;
+}
+
+.mydebates {
+  width:60%;
+  border-spacing:0px;
+  border: 1px solid black;
+  margin-top:15px;
+}
+
+.mydebates th {
+  font-size:18px;
+  color:#a4a4a4;
+  background-color:#ffcc00;
+  height:35px;
+  text-align:left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .userinfo {
   position:absolute;
   left:450px;

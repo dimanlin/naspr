@@ -6,6 +6,11 @@ class AddDebate < ActiveRecord::Migration
         Debate.create(:header => "Кто лудше, я или он?_#{i}", :message => "Он такой растакой а я такой никакой что мне делать как мне жить?_#{i}", :user_id => user.id, :rules => true)
       }
     }
+
+
+    100.times {|i|
+      Debate.create(:header => "Кто лудше, я или он?_#{i}", :message => "Он такой растакой а я такой никакой что мне делать как мне жить?_#{i}", :user_id => 2, :rules => true)
+    }
   end
 
   def self.down

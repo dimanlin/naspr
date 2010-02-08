@@ -10,6 +10,11 @@ class DebatesController < ApplicationController
 
   def create
     @debate = Debate.create(params[:debate])
+
+    if current_user
+      @debate.update_attributes(:user_id => current_user.id)
+    end
+
     if @debate.save
       redirect_to root_url
     else
