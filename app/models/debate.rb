@@ -14,7 +14,7 @@ class Debate < ActiveRecord::Base
   def user_avatar
     if self.user
       if self.user.avatar_file_name
-        lastdebate.user.avatar.url(:thumb)
+        self.user.avatar.url(:original)
       else
         File.join("avatar2.jpg")
       end

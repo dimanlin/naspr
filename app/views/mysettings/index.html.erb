@@ -1,0 +1,15 @@
+      <h1>Мои настройки</h1>
+      <div class="settings">
+        <% form_for @user do |f| -%>
+          <%= f.error_messages %>
+          <img src="images/avatar2.jpg" alt="avatar" class="settings_avatar" />
+          <span class="font_size10">Загружаемая фотография не должна быть больше 5 мегабайт</span>
+          <%= f.file_field :avatar, :class => "file_avatar" %>
+          <div class="formats">
+            <span>Допустимые форматы: jpg, png</span>
+            <%= submit_tag "Сохранить", :class => "right_submit" %>
+          </div>
+        <% end -%>
+        <div class="clear"></div>
+      </div>
+

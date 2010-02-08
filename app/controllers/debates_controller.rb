@@ -41,20 +41,20 @@ class DebatesController < ApplicationController
     @numfalseansver = @debate.comments.voted_like(0).size
 
     @trueansver = WillPaginate::Collection.create(params[:page] ||= 1, 10) do |pager|
-      result = Comment.find(:all, :limit => pager.per_page, :offset => pager.offset, :conditions => ["voted = ? AND debate_id = ?", true, @debate.id], :order => "created_at DESC")
-      pager.replace(result)
-
-      unless pager.total_entries
-        pager.total_entries = Comment.find(:all, :conditions => ["voted = ? AND debate_id = ?", true, @debate.id]).size
-      end
-    end
-
-    @falseansver = WillPaginate::Collection.create(params[:page] ||= 1, 10) do |pager|
       result = Comment.find(:all, :limit => pager.per_page, :offset => pager.offset, :conditions => ["voted = ? AND debate_id = ?", false, @debate.id], :order => "created_at DESC")
       pager.replace(result)
 
       unless pager.total_entries
         pager.total_entries = Comment.find(:all, :conditions => ["voted = ? AND debate_id = ?", false, @debate.id]).size
+      end
+    end
+
+    @falseansver = WillPaginate::Collection.create(params[:page] ||= 1, 10) do |pager|
+      result = Comment.find(:all, :limit => pager.per_page, :offset => pager.offset, :conditions => ["voted = ? AND debate_id = ?", true, @debate.id], :order => "created_at DESC")
+      pager.replace(result)
+
+      unless pager.total_entries
+        pager.total_entries = Comment.find(:all, :conditions => ["voted = ? AND debate_id = ?", true, @debate.id]).size
       end
     end
 

@@ -11,6 +11,7 @@ ActionController::Routing::Routes.draw do |map|
   map.root :controller => "main"
   map.resources :comments
   map.resources :mydebates
+  map.resources :mysettings
 
   map.namespace(:admin) do |admin|
     admin.root :controller => "debates"

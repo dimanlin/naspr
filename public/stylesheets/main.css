@@ -6,6 +6,55 @@ html, body {
 	font-size:14px;
 }
 
+.float_right {
+  float:right;
+}
+
+.email_settings_header {
+  width:230px;
+}
+
+.settings_input {
+  border:1px solid black;
+  width:100%;
+  height:27px;
+  font-size:24px;
+}
+
+.email_settings {
+  margin-top:30px;
+  font-size:18px;
+  color:#d44d4d;
+  width:100%;
+}
+
+.formats {
+  width:100%;
+  margin-top:10px;
+}
+
+.font_size10 {
+  font-size:10px;
+}
+
+.file_avatar {
+  margin-top:5px;
+}
+
+.settings_avatar {
+  float:left;
+  margin-right:10px;
+  border:1px solid white;
+}
+
+.settings {
+  padding:15px;
+  background-color:#d6d6d6;
+  width:600px;
+  border:1px solid black;
+  overflow:hidden;
+}
+
 .paddingleft15 {
   padding-left:15px;
 }

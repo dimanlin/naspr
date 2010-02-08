@@ -21,13 +21,18 @@ class UsersController < ApplicationController
     end
   end
 
-  def index
+  def edit
+    @user = current_user
   end
 
-  def show
-  end
-
-  def delete
+  def update
+    @user = User.find(params[:id])
+    @user.update_attributes(params[:user])
+    if @user.save
+      redirect_to root_url
+    else
+      render :action => "edit"
+    end
   end
 
 end
