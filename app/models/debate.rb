@@ -11,7 +11,17 @@ class Debate < ActiveRecord::Base
   belongs_to :user
   has_many :comments
 
-
+  def user_avatar
+    if self.user
+      if self.user.avatar_file_name
+        lastdebate.user.avatar.url(:thumb)
+      else
+        File.join("avatar2.jpg")
+      end
+    else
+      File.join("avatar2.jpg")
+    end
+  end
 
   def num_ansver_true
     self.comments.find(:all, :conditions => ["voted = ?", true]).size

@@ -2,18 +2,7 @@
               <h2><%= link_to lastdebate.header, debate_url(:id => lastdebate.id), :class => "color_h2_a" %></h2>
               <div>
                 <div class="avatar">
-                  <% if lastdebate.user -%>
-
-                    <% if lastdebate.user.avatar_file_name -%>
-                      <%= image_tag lastdebate.user.avatar.url(:thumb) %>
-                    <% else -%>
-                      <img src="images/avatar2.jpg" alt="default avatar" />
-                    <% end -%>
-
-                  <% else -%>
-                      <img src="images/avatar2.jpg" alt="default avatar" />
-                  <% end -%>
-
+                  <%= image_tag(lastdebate.user_avatar, :alt => "avatar") %>
                 </div>
 
                 <div class="text"><%= lastdebate.message %></div>
