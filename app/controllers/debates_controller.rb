@@ -7,6 +7,10 @@ class DebatesController < ApplicationController
   before_filter :comment, :only => [:index]
   before_filter :rules, :only => [:create, :new]
 
+  def search
+    @search_result = Debate.search(params[:text])
+  end
+
   def mydebates
     @debates = Debate.paginate(:all, :conditions => ["user_id = ?", current_user.id], :per_page => 20, :page => params[:page], :order => "created_at DESC")
   end

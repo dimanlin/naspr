@@ -10,7 +10,7 @@ ActionController::Routing::Routes.draw do |map|
   map.connect '/page/*urlname', :controller => "contents", :action => "show"
   map.root :controller => "main"
   map.resources :comments
-  map.resources :debates, :collection => {:mydebates => :get}
+  map.resources :debates, :collection => {:mydebates => :get, :search => :get}
 
   map.resources :debates do |debates|
     debates.resources :comments

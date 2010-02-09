@@ -11,6 +11,11 @@ class Debate < ActiveRecord::Base
   belongs_to :user
   has_many :comments
 
+  define_index do
+    # fields
+    indexes header, :sortable => true
+  end
+
   def user_avatar
     if self.user
       if self.user.avatar_file_name

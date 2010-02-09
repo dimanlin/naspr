@@ -38,10 +38,10 @@
 
 
       <div class="search">
-        <form action="#" method="post">
-          <input type="search" class="input_search">
-          <input type="image" src="/images/search_button.png" class="search_image" alt="asdasd"/>
-        </form>
+          <% form_tag(search_debates_url, :method => :get) do %>
+            <%= text_field_tag :text, nil, :class => "input_search" %>
+            <%= image_submit_tag("search_button.png", :class => "search_image", :alt => "Поиск") %>
+          <% end -%>
       </div>
 
       <div class="enter">
