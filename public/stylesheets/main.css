@@ -531,6 +531,16 @@ footer {
   color:#2077f9;
 }
 
+.golosovat2 a {
+  color:#3AABFA;
+}
+
+.golosovat2 {
+  float:right;
+  margin-right:40px;
+  font-size:18px;
+}
+
 .golosovat {
   margin-top:8px;
   cursor:pointer;
