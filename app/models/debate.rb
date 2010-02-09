@@ -2,8 +2,8 @@ class Debate < ActiveRecord::Base
 
   attr_accessor :rules
 
-  cattr_reader :per_page
-  @@per_page = 20
+#  cattr_reader :per_page
+#  @@per_page = 20
 
   validates_presence_of :header, :message
   validates_inclusion_of :rules, :in => [true, "1"], :message => "Вы должны быть согласны с правилами сервиса."
@@ -35,7 +35,5 @@ class Debate < ActiveRecord::Base
   def num_ansver_false
     self.comments.find(:all, :conditions => ["voted = ?", false]).size
   end
-
-
 end
 

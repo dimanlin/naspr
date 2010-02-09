@@ -1,4 +1,5 @@
 <% @search_result.each {|i| %>
   <%= i.header %>
 <% } -%>
+<%= will_paginate @search_result %>
 

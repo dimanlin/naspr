@@ -8,7 +8,7 @@ class DebatesController < ApplicationController
   before_filter :rules, :only => [:create, :new]
 
   def search
-    @search_result = Debate.search(params[:text])
+    @search_result = Debate.search params[:text], :page => params[:page]
   end
 
   def mydebates
