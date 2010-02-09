@@ -1,5 +1,5 @@
-
-      <h1>Мои мнения</h1>
+<%= render :partial => 'templates/site_navigation' %>
+      <h1>Мои споры/мнения</h1>
 <%= will_paginate @debates, :previous_label => " ", :next_label => " " %>
       <table class="mydebates">
         <tr><th class="paddingleft15">Заголовок</th><th>За</th><th>Против</th><th>Дата создания</th></tr>

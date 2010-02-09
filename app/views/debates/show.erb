@@ -1,11 +1,11 @@
 <%= javascript_include_tag "slide_golos" %>
 <section>
 <%= render :partial => 'templates/site_navigation' %>
-  <h1 class="header_h1">Все споры</h1>
+  <h1 class="header_h1">Спор/мнение</h1>
 
 
   <div class="list_debates">
-    <h2 class="header_for_debate"><%= @debate.header %></h2>
+    <h2 class="header_for_debate_not_link"><%= @debate.header %></h2>
     <div class="avatar">
       <%= image_tag("avatar2.jpg", :alt => "avatar") %>
     </div>
