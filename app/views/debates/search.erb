@@ -1,5 +1,17 @@
-<% @search_result.each {|i| %>
-  <%= i.header %>
-<% } -%>
+
+      <h1>Мои настройки</h1>
+      <div class="search_panel">
+<% form_tag(search_debates_url, :method => :get) do %>
+        <table class="search_table">
+          <tr>
+            <td class="left_td"><%= text_field_tag :text, params[:text], :class => "input_main_search" %></td>
+            <td class="right_td"><%= image_submit_tag("search.jpg", :class => "search_main_button", :alt => "Поиск") %></td>
+          </tr>
+        </table>
+<% end -%>
+      </div>
+
+<%= will_paginate @search_result %>
+<%= render :partial => 'search_block', :collection => @search_result %>
 <%= will_paginate @search_result %>
 

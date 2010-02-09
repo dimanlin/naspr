@@ -6,6 +6,121 @@ html, body {
 	font-size:14px;
 }
 
+
+html, body {
+	margin:0;
+	padding:0;
+	background-color: #fff;
+	font-family:Tahoma, Geneva, sans-serif;
+	font-size:14px;
+}
+
+.search_text {
+  margin-left:10px;
+  margin-top:10px;
+  color:#787878;
+}
+
+.search_td_left {
+  width:48px;
+}
+
+.out_div {
+  float:left;
+  margin-top:6px;
+}
+
+.link_to_search {
+  display:inline;
+  float:left;
+}
+
+.search_avatar {
+  margin-top:10px;
+}
+
+.serch_num_rez {
+  font-size:24px;
+  float:left;
+  margin-left:45px;
+}
+
+.numrezsearch {
+  font-size:24px;
+  color:black;
+  float:left;
+  margin-top:3px;
+  margin-left:10px;
+}
+
+.table_result_search a {
+  color:#c5c5c5;
+  font-size:18px;
+  margin-left:8px;
+}
+
+.table_result_search td {
+  vertical-align:top;
+
+}
+
+.table_result_search {
+  width:100%;
+  margin-top:30px;
+  border-spacing:0px;
+}
+
+.right_td {
+  width:155px;
+}
+
+.search_table {
+  width:100%;
+  margin-top:7px;
+}
+
+.search_main_button {
+  margin-top:2px;
+  margin-left:58px;
+}
+
+.input_main_search {
+  width:100%;
+  height:31px;
+  border:1px solid #dadada;
+  margin-left:10px;
+  font-size:24px;
+}
+
+.search_panel {
+  background-color:#ffc446;
+  width:70%;
+  height:55px;
+  border:1px solid #bebebe;
+}
+
+.float_right {
+  float:right;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .float_right {
   float:right;
 }

@@ -1,0 +1,15 @@
+<div class="search_string">
+    <table class="table_result_search">
+      <tr>
+        <td class="search_td_left"><%= image_tag(search_block.user_avatar, :alt => "avatar", :class => "search_avatar") %></td>
+        <td>
+          <div class="numrezsearch">1.</div> <div class="out_div"><div class="link_to_search"><%= link_to search_block.header, debate_url(search_block), :popup => true %></div></div> <div class="serch_num_rez">За: <%= search_block.num_ansver_true %></div> <div  class="serch_num_rez">Против: <%= search_block.num_ansver_false %></div>
+          <div class="clear"></div>
+          <div class="search_text">
+            <%= search_block.message %>
+          </div>
+        </td>
+      </tr>
+    </table>
+</div>
+
