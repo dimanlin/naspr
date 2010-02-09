@@ -26,6 +26,9 @@ module NavigationHelpers
     when /page about/
       "/page/about"
 
+    when /the debate search/
+      '/debates/search'
+
 
 
     # Add more mappings here.

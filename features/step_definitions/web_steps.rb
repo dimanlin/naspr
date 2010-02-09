@@ -11,6 +11,11 @@ require File.expand_path(File.join(File.dirname(__FILE__), "..", "support", "pat
 # Commonly used webrat steps
 # http://github.com/brynary/webrat
 
+Given 'the Sphinx indexes are updated' do
+  ThinkingSphinx::Test.index
+  sleep(0.25) # Wait for Sphinx to catch up
+end
+
 Given /^(?:|I )am on (.+)$/ do |page_name|
   visit path_to(page_name)
 end
