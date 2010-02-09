@@ -10,8 +10,11 @@ ActionController::Routing::Routes.draw do |map|
   map.connect '/page/*urlname', :controller => "contents", :action => "show"
   map.root :controller => "main"
   map.resources :comments
-  map.resources :mydebates
-  map.resources :mysettings
+  map.resources :debates, :collection => {:mydebates => :get}
+
+  map.resources :debates do |debates|
+    debates.resources :comments
+  end
 
   map.namespace(:admin) do |admin|
     admin.root :controller => "debates"
@@ -21,9 +24,7 @@ ActionController::Routing::Routes.draw do |map|
     admin.resources :contents
   end
 
-  map.resources :debates do |debates|
-    debates.resources :comments
-  end
+
 
   # The priority is based upon order of creation: first created -> highest priority.
 

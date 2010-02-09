@@ -28,9 +28,9 @@
           <% end -%>
 
           <ul class="listparams">
-            <li><%= link_to 'Мои споры/мнения', mydebates_url %></li>
+            <li><%= link_to 'Мои споры/мнения', mydebates_debates_url %></li>
             <li><%= link_to 'Редактировать профиль', edit_user_url(current_user.id) %></li>
-            <li><a href="#">Новый спор/мнение</a></li>
+            <li><%= link_to 'Новый спор/мнение', new_debate_url %></li>
           </ul>
           <div class="clear"></div>
         </div>
