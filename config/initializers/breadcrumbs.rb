@@ -11,6 +11,7 @@ Breadcrumb.configure do
   crumb :new_user, "Регистрация", :new_user
   crumb :login, "Авторизация", :login_url
   crumb :debate_search, "Поиск", :debate_search_url
+  crumb :contact, "Контакты", "asdas"
 
 
   # Specify controller, action, and an array of the crumbs you specified above
@@ -25,6 +26,7 @@ Breadcrumb.configure do
   trail :users, :create, [:root, :new_user]
   trail :user_sessions, :new, [:root, :login]
   trail :debates, :search, [:root, :debate_search]
+  trail :contents, :show, [:root, :contact]
 
 
   # Specify the delimiter for the crumbs
