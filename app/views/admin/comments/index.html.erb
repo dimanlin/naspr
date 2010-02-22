@@ -23,7 +23,12 @@
             <%= comment.id %>
           </td>
 										<td>
-						<%= link_to comment.user.nick, admin_user_path(comment.user.id) %>
+					<% if comment.user -%>
+            <%= link_to comment.user.nick, admin_user_path(comment.user.id) %>
+					<% else -%>
+
+					<% end -%>
+
 					</td>
 										<td>
             <%= comment.created_at %>

@@ -1,5 +1,8 @@
 class Admin::ContentsController < ApplicationController
 
+  before_filter :require_user
+  before_filter :admin
+
   def index
     @contents = Content.find(:all)
   end

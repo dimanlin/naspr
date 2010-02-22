@@ -11,6 +11,13 @@ class ApplicationController < ActionController::Base
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
 
+  def admin
+    if current_user.master != true
+      store_location
+      redirect_to new_user_session_url
+    end
+  end
+
   def rules
     @rules = Content.find_by_permalink("new_debate")
   end

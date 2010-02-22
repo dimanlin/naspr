@@ -1,5 +1,8 @@
 class Admin::CommentsController < ApplicationController
 
+  before_filter :require_user
+  before_filter :admin
+
   def index
     @comments = Comment.paginate :page => params[:page], :per_page => 40, :order => "created_at DESC"
   end

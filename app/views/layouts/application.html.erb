@@ -2,13 +2,13 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Web App</title>
+	<title>naspr.ru</title>
 	<%= stylesheet_link_tag "web_app_theme", "web_app_theme_override", "themes/default/style", :cache => true %>
 </head>
 <body>
   <div id="container">
     <div id="header">
-      <h1><a href="/">Web App</a></h1>
+      <h1><%= link_to 'naspr.ru', root_url %></h1>
       <div id="user-navigation">
         <ul class="wat-cf">
           <li><%= link_to t("web-app-theme.profile", :default => "Profile"), edit_admin_admin_users_url %></li>
