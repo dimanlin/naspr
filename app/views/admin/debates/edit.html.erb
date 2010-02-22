@@ -10,6 +10,7 @@
     <h2 class="title"><%= t("web-app-theme.edit", :default => "Edit") %> Debate</h2>
     <div class="inner">
       <% form_for @debate, :url => admin_debate_path(@debate), :html => { :class => :form } do |f| -%>
+        <%= f.error_messages %>
         <%= render :partial => "form", :locals => {:f => f} %>
       <% end -%>
     </div>
