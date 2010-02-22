@@ -10,6 +10,7 @@
     <h2 class="title"><%= t("web-app-theme.new", :default => "New")%>  Content</h2>
     <div class="inner">
       <% form_for :content, :url => admin_contents_path, :html => { :class => :form } do |f| -%>
+        <%= f.error_messages %>
         <%= render :partial => "form", :locals => {:f => f} %>
       <% end -%>
     </div>
