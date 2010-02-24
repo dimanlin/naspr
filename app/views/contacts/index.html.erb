@@ -1,0 +1,46 @@
+<% content_for :title do %>Контакты naspr.ru<% end %>
+<% content_for :description do %>Общественное мнение, истина, прав ли я, споры, мнения, дебаты, мнение народа, коллективные споры<% end %>
+<% content_for :keywords do %>Общественное мнение, истина, прав ли я, споры, мнения, дебаты, мнение народа, коллективные споры<% end %>
+
+<%= render :partial => 'templates/site_navigation' %>
+
+<h1 class="header_h1">Контакты</h1>
+<%= flash[:notice] %>
+<% form_for @contact, :url => {} do |f| -%>
+  <%= f.error_messages %>
+  <table class="contact_form_table">
+    <tr>
+      <td>Имя:</td>
+      <td>
+        <%= f.text_field :from, :class => "input" %>
+      </td>
+      <td rowspan="2" class="telimage">
+        <%= image_tag("tel.jpg") %>
+      </td>
+    </tr>
+    <tr>
+      <td>Электронная почта:</td>
+      <td>
+        <%= f.text_field :email, :class => "input" %>
+      </td>
+    </tr>
+    <tr>
+      <td>Обращение:</td>
+      <td colspan="2">
+        <%= f.text_area :message, :class => "textarea", :size => "20x10" %>
+      </td>
+    </tr>
+    <tr>
+      <td colspan="3">
+        <%= f.submit "Отправить", :class => "right_submit" %>
+      </td>
+    </tr>
+  </table>
+<% end -%>
+
+  <div class="phone">
+    <address>
+            Контактный телефон: <span>8-953-704-00-87</span>
+    </address>
+  </div>
+

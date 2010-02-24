@@ -1,0 +1,25 @@
+
+  <div class="group">
+    <%= f.label :from, t("activerecord.attributes.contact.from", :default => "From"), :class => :label %>
+    <%= f.text_field :from, :class => 'text_field' %>
+    <span class="description">Ex: a simple text</span>
+  </div>
+
+  <div class="group">
+    <%= f.label :email, t("activerecord.attributes.contact.email", :default => "Email"), :class => :label %>
+    <%= f.text_field :email, :class => 'text_field' %>
+    <span class="description">Ex: a simple text</span>
+  </div>
+
+  <div class="group">
+    <%= f.label :message, t("activerecord.attributes.contact.message", :default => "Message"), :class => :label %>
+    <%= f.text_area :message, :class => 'text_area' %>
+    <span class="description">Ex: a simple text</span>
+  </div>
+        
+<div class="group navform wat-cf">
+  <button class="button" type="submit">
+    <%= image_tag("web-app-theme/tick.png", :alt => "#{t("web-app-theme.save", :default => "Save")}") %> <%= t("web-app-theme.save", :default => "Save") %>
+  </button>  
+  <%= link_to "#{image_tag("web-app-theme/cross.png", :alt => "#{t("web-app-theme.cancel", :default => "Cancel")}")} #{t("web-app-theme.cancel", :default => "Cancel")}", admin_contacts_path, :class => "button" %> 
+</div>
