@@ -1,5 +1,8 @@
 class Admin::ContactsController < ApplicationController
 
+  before_filter :require_user
+  before_filter :admin
+
   def index
     @contacts = Contact.paginate(:all, :order => "created_at DESC", :page => params[:page], :per_page => 20)
   end
