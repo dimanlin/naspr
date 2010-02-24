@@ -6,6 +6,7 @@ class Comment < ActiveRecord::Base
   validates_presence_of :message
   validates_inclusion_of :voted, :in => [true, false]
 
+  xss_terminate :html5lib_sanitize => [:message]
 
   def ansver
     case self.voted

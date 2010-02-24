@@ -8,6 +8,8 @@ class Debate < ActiveRecord::Base
   belongs_to :user
   has_many :comments
 
+  xss_terminate :html5lib_sanitize => [:header, :message]
+
   define_index do
     indexes header, :sortable => true
   end

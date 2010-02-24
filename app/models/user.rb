@@ -3,6 +3,8 @@ class User < ActiveRecord::Base
   validates_presence_of :nick
   validates_uniqueness_of :nick
 
+  xss_terminate :html5lib_sanitize => [:nick]
+
   has_attached_file :avatar, :styles => { :original => "83x83>" }
 
   has_many :debates
