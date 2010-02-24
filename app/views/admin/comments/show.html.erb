@@ -11,7 +11,12 @@
 
         <p>
           <b><%= t("activerecord.attributes.admin_comment.user.nick", :default => t("activerecord.labels.nick", :default => "User")) %>:</b>
-          <%= link_to @comment.user.nick, admin_user_url(@comment.user.id) %>
+          <% if @comment.user -%>
+            <%= link_to @comment.user.nick, admin_user_url(@comment.user.id) %>
+          <% else -%>
+            nobody
+          <% end -%>
+
         </p>
 
         <p>

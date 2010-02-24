@@ -17,7 +17,6 @@ Feature: create debate
     When I fill in "debate[header]" with "my new debate"
     When I fill in "debate[message]" with "asdasdasdasd"
     When I check "debate[rules]"
-    When I check "debate[alert]"
     When I press "Создать спор"
     Then I should be on "the homepage"
     Then I should see "my new debate"
