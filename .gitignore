@@ -3,3 +3,4 @@ log/*.log
 rerun.txt
 1.txt
 config/cucumber.sphinx.conf
+db/sphinx/*.*

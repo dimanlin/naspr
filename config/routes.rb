@@ -10,6 +10,7 @@ ActionController::Routing::Routes.draw do |map|
   map.connect '/page/*urlname', :controller => "contents", :action => "show"
   map.root :controller => "main"
   map.resources :comments
+  map.resources :contacts
   map.resources :debates, :collection => {:mydebates => :get, :search => :get}
 
   map.resources :debates do |debates|
@@ -22,6 +23,7 @@ ActionController::Routing::Routes.draw do |map|
     admin.resources :comments
     admin.resources :users, :collection => {:edit_admin => :get}
     admin.resources :contents
+    admin.resources :contacts
   end
 
 

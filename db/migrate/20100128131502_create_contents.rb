@@ -6,6 +6,7 @@ class CreateContents < ActiveRecord::Migration
       t.column :text, :text
       t.column :urlname, :string   # when I see in url
       t.column :permalink, :string # were is be
+      t.column :title, :string
       t.timestamps
     end
   end

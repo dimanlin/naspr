@@ -174,6 +174,7 @@ ru:
       user: "Пользователь"
       comment: "Комментарий"
       user_session: "Сессия пользователя"
+      contact: Контакты
     attributes:
       user_session:
         password: "Пароль"
@@ -188,6 +189,9 @@ ru:
       comment:
         voted: 'Кнопка "за" или "против"'
         message: 'Поле "Потому, что"'
+      contact:
+        from: "Имя"
+        message: "Обращение"
 
 
 

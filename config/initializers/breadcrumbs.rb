@@ -27,6 +27,7 @@ Breadcrumb.configure do
   trail :user_sessions, :new, [:root, :login]
   trail :debates, :search, [:root, :debate_search]
   trail :contents, :show, [:root, :contact]
+  trail :contacts, :index, [:root, :contact]
 
 
   # Specify the delimiter for the crumbs

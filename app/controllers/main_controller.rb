@@ -4,7 +4,7 @@ class MainController < ApplicationController
 
   def index
     @debates = Debate.find(:all, :limit => 20, :order => "created_at DESC")
-    @comment = Comment.new(:debate_id => @debates.first.id)
+    @comment = Comment.new(:debate_id => @debates.first.id) unless @debates.empty?
   end
 
   def show

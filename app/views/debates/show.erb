@@ -1,3 +1,7 @@
+<% content_for :title do %><%= @debate.header %><% end %>
+<% content_for :description do %>Общественное мнение, истина, прав ли я, споры, мнения, дебаты, мнение народа, коллективные споры<% end %>
+<% content_for :keywords do %>Общественное мнение, истина, прав ли я, споры, мнения, дебаты, мнение народа, коллективные споры<% end %>
+
 <%= javascript_include_tag "slide_golos" %>
 <section>
 <%= render :partial => 'templates/site_navigation' %>
@@ -52,7 +56,6 @@
   <% else -%>
     <%= will_paginate @trueansver, :next_label => "", :previous_label => ""  %>
   <% end -%>
-
 
 </section>
 

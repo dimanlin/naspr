@@ -21,10 +21,10 @@ module NavigationHelpers
       "/debates"
 
     when /page contacts/
-      "/page/contact"
+      "/contacts"
 
-    when /page about/
-      "/page/about"
+    when /page advertising/
+      "/page/advertising"
 
     when /the debate search/
       '/debates/search'

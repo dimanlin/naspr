@@ -2,8 +2,10 @@
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="keywords" content="<%= yield :keywords %>" />
+    <meta name="description" content="<%= yield :description %>" />
     <%= stylesheet_link_tag "main" %>
-    <title>Nasp</title>
+    <title><%= yield :title %></title>
   </head>
   <body>
   <%= javascript_include_tag "jquery" %>
@@ -68,6 +70,7 @@
       <footer>
         <div class="footer_menu">
             <%= render :partial => 'templates/bottom_menu', :collection => @contents %>
+            <%= link_to 'Контакты', contacts_url %>
         </div>
 
         <div class="layvinternet">
