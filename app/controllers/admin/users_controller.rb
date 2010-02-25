@@ -19,6 +19,7 @@ class Admin::UsersController < ApplicationController
     @user = User.find(params[:id])
     @user.update_attributes(params[:user])
     if @user.save
+      PasswordMailer.deliver_new_password(@user, params[:user][:password])
       flash[:notice] = "User whith ID #{@user.id} was updated."
       redirect_to admin_users_url
     else

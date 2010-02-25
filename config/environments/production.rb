@@ -26,3 +26,17 @@ config.action_view.cache_template_loading            = true
 
 # Enable threaded mode
 # config.threadsafe!
+
+config.action_mailer.raise_delivery_errors = false
+
+config.action_mailer.delivery_method = :smtp
+
+config.action_mailer.smtp_settings = {
+  :address => "smtp.yandex.ru",
+  :port => "25",
+  :domain => "www.yandex.ru",
+  :user_name => "devandart",
+  :password => "gs6cvuq",
+  :authentication => :login
+}
+
