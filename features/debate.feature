@@ -3,7 +3,7 @@ Feature: create debate
   I want to create debate
 
   Scenario: Go to main page
-    Given there is a user with the login "diman@ya.ru" and the password "root00" and the password_confirmation "root00" and the nick "nick"
+    Given there is a user with the login "admin@ya.ru" and the password "root00" and the password_confirmation "root00" and the nick "nick" and the master "true"
     Given there is a debate with the header "debates_1" and the user_id "1" and the message "message_1" and the rules "1"
 
     Given there is a content with the name "Реклама" and the header "Реклама" and the text "Реклама" and the urlname "advertising" and the permalink "*" and the title "Реклама на naspr.ru"
@@ -31,4 +31,20 @@ Feature: create debate
     Then I should see "Поле 'Тема' не может быть пустым"
     Then I should see "Поле 'Почему вы так думаете' не может быть пустым"
     Then I should see "Вы должны быть согласны с правилами сервиса."
+
+    Then I follow "Войти"
+    When I fill in "user_session[login]" with "admin@ya.ru"
+    When I fill in "user_session[password]" with "root00"
+    When I press "login"
+
+    Then I follow "Админка"
+    Then I follow "Debates"
+    Then I follow "debates_1"
+    Then I follow "Edit"
+
+    When I fill in "debate[header]" with "my_edit_debate"
+    When I press "Save"
+    Then I should see "my_edit_debate"
+    Then I follow "Delete"
+    Then I should not see "my_edit_debate"
 
