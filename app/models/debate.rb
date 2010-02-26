@@ -27,11 +27,11 @@ class Debate < ActiveRecord::Base
   end
 
   def num_ansver_true
-    self.comments.find(:all, :conditions => ["voted = ?", true]).size
+    self.comments.find(:all, :conditions => ["voted = ?", false]).size
   end
 
   def num_ansver_false
-    self.comments.find(:all, :conditions => ["voted = ?", false]).size
+    self.comments.find(:all, :conditions => ["voted = ?", true]).size
   end
 end
 
