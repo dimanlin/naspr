@@ -22,6 +22,7 @@ class Admin::CommentsController < ApplicationController
     @comment.update_attributes(params[:comment])
     if @comment.save
       flash[:notice] = "Comment whith ID #{@comment.id}, was updated."
+      redirect_to admin_comments_url
     else
       render :action => "edit"
     end
