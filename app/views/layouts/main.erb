@@ -13,7 +13,7 @@
     <header>
       <div class="logo">
         <h1>
-          <%= image_tag("naspr.jpg", :alt => "Споры") %>
+          <%= link_to image_tag("naspr.jpg", :alt => "Споры"), root_url %>
         </h1>
       </div>
 
@@ -65,6 +65,9 @@
     </header>
 
     <div class="content">
+    <div class="error_messages">
+      <%= flash[:notice] %>
+    </div>
   <%= yield %>
     </div>
       <footer>

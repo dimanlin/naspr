@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100224123315) do
+ActiveRecord::Schema.define(:version => 20100225160937) do
 
   create_table "comments", :force => true do |t|
     t.integer  "user_id"
@@ -46,6 +46,13 @@ ActiveRecord::Schema.define(:version => 20100224123315) do
     t.text     "message"
     t.boolean  "alert",      :default => false
     t.boolean  "check",      :default => false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "recoverpasswords", :force => true do |t|
+    t.integer  "user_id"
+    t.string   "key"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
 
+  attr_accessor :key
+
   validates_presence_of :nick
   validates_uniqueness_of :nick
 
@@ -9,6 +11,7 @@ class User < ActiveRecord::Base
 
   has_many :debates
   has_many :comments
+  has_one :recoverpassword
 
   acts_as_authentic do |c|
     c.crypto_provider = Authlogic::CryptoProviders::Sha1

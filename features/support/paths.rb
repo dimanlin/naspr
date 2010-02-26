@@ -29,6 +29,12 @@ module NavigationHelpers
     when /the debate search/
       '/debates/search'
 
+    when /the recoverpassword/
+      '/users/newpassword?key=876asd5f76x57x657zx65v7z6xc'
+
+    when /the wrong recover link/
+      '/users/newpassword?key=879s8df79s8df79s8df79s8df7s9d8'
+
 
 
     # Add more mappings here.

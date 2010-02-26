@@ -6,6 +6,31 @@ html, body {
 	font-size:14px;
 }
 
+a img {
+  border:none;
+}
+
+.error_messages {
+  text-align:center;
+  padding:20px;
+}
+
+.newpasswordbutton {
+  float:right;
+  padding-right:39px;
+}
+
+.flash_for_recover_password {
+  font-size:18px;
+  padding-left:15px;
+}
+
+.recoverbutton {
+  position:relative;
+  top:100px;
+  left:374px;
+}
+
 .contact_form_table {
   margin-top:20px;
 }

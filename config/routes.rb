@@ -1,9 +1,10 @@
 ActionController::Routing::Routes.draw do |map|
 
   map.login 'login', :controller => 'user_sessions', :action => 'new'
+  map.recover_password 'recover_password', :controller => 'user_sessions', :action => 'recover_password'
   map.logout 'logout', :controller => 'user_sessions', :action => 'destroy'
-  map.resources :user_sessions
-  map.resources :users
+  map.resources :user_sessions, :collection => {:recover_password => :any}
+  map.resources :users, :collection => {:newpassword => :any, :createnewpassword => :post}
 
   map.resource :main
   map.resources :contents
