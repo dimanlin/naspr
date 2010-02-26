@@ -2,7 +2,6 @@
   <div class="secondary-navigation">
     <ul class="wat-cf">
       <li class="first"><%= link_to "#{t("web-app-theme.list", :default => "List")}", admin_comments_path  %></li>
-      <li><%= link_to "#{t("web-app-theme.new", :default => "New")}", new_admin_comment_path %></li>
       <li class="active"><%= link_to "#{t("web-app-theme.show", :default => "Show")}", admin_comment_path %></li>
     </ul>
   </div>
@@ -21,7 +20,7 @@
 
         <p>
           <b><%= t("activerecord.attributes.admin_comment.debate_id", :default => t("activerecord.labels.debate_id", :default => "Debate")) %>:</b>
-          <%= @comment.debate_id %>
+          <%= link_to @comment.debate.header, admin_debate_url(:id => @comment.debate.id) %>
         </p>
 
         <p>
