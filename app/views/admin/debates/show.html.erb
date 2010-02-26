@@ -15,7 +15,11 @@
 
         <p>
           <b><%= t("activerecord.attributes.admin_debate.user_id", :default => t("activerecord.labels.user_id", :default => "User")) %>:</b>
-          <%= link_to @debate.user.login, admin_user_url(@debate.user.id) %>
+          <% if @debate.user -%>
+            <%= link_to @debate.user.login, admin_user_url(@debate.user.id) %>
+          <% else -%>
+            nobody
+          <% end -%>
         </p>
 
         <p>

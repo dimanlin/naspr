@@ -7,7 +7,11 @@
 
   <div class="group">
     <%= f.label :user_id, t("activerecord.attributes.debate.user_id", :default => "User"), :class => :label %>
-    <%= link_to @debate.user.login, admin_user_url(@debate.user.id) %>
+          <% if @debate.user -%>
+            <%= link_to @debate.user.login, admin_user_url(@debate.user.id) %>
+          <% else -%>
+            nobody
+          <% end -%>
 
   </div>
 
