@@ -1,7 +1,11 @@
   <div class="list_debates">
     <h2 class="header_for_debate"><%= link_to debate.header, debate_url(:id => debate.id) %></h2>
     <div class="avatar">
-      <%= image_tag("avatar.jpg") %>
+          <% if current_user.avatar? -%>
+              <%= image_tag current_user.avatar.url %>
+          <% else -%>
+            <%= image_tag "/images/avatar2.jpg" %>
+          <% end -%>
     </div>
     <%= debate.message %>
     <div class="clear"></div>
