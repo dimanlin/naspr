@@ -45,8 +45,8 @@ class DebatesController < ApplicationController
   def show
     @debate = Debate.find(params[:id])
 
-    @numtrueansver = @debate.comments.voted_like(1).size
-    @numfalseansver = @debate.comments.voted_like(0).size
+    @numtrueansver = @debate.comments.voted_like(0).size
+    @numfalseansver = @debate.comments.voted_like(1).size
 
     @trueansver = WillPaginate::Collection.create(params[:page] ||= 1, 10) do |pager|
       result = Comment.find(:all, :limit => pager.per_page, :offset => pager.offset, :conditions => ["voted = ? AND debate_id = ?", false, @debate.id], :order => "created_at DESC")
