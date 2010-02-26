@@ -30,14 +30,14 @@
             <%= image_tag "/images/avatar2.jpg" %>
           <% end -%>
             </div>
-          <ul class="listparams">
+          <menu type="toolbar" class="listparams">
             <li><%= link_to 'Мои споры/мнения', mydebates_debates_url %></li>
             <li><%= link_to 'Редактировать профиль', edit_user_url(current_user.id) %></li>
             <li><%= link_to 'Новый спор/мнение', new_debate_url %></li>
             <% if current_user.master == true -%>
               <li><%= link_to 'Админка', admin_root_url %></li>
             <% end -%>
-          </ul>
+          </menu>
           <div class="clear"></div>
         </div>
       <% end -%>
