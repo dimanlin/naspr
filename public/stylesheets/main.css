@@ -839,8 +839,9 @@ header {
 
 .header {
   position:absolute;
-  top:12px;
-  left:190px;
+  top:70px;
+  left:10px;
+  font-size:8px;
 }
 
 .search {
