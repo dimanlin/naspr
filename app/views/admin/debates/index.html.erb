@@ -28,9 +28,9 @@
             <%= debate.created_at %>
           </td>
           <td class="last">
-            <%= link_to "#{t("web-app-theme.show", :default => "Show")}", admin_debate_path(debate) %> |
-            <%= link_to "#{t("web-app-theme.edit", :default => "Edit")}", edit_admin_debate_path(debate) %> |
-            <%= link_to "#{t("web-app-theme.delete", :default => "Delete")}", admin_debate_path(debate), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}" %>
+            <%= link_to "#{t("web-app-theme.show", :default => "Show")}", admin_debate_path(debate.id) %> |
+            <%= link_to "#{t("web-app-theme.edit", :default => "Edit")}", edit_admin_debate_path(debate.id) %> |
+            <%= link_to "#{t("web-app-theme.delete", :default => "Delete")}", admin_debate_path(debate.id), :method => :delete, :confirm => "#{t("web-app-theme.confirm", :default => "Are you sure?")}" %>
           </td>
         </tr>
         <% end -%>
